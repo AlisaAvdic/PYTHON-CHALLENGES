@@ -7,8 +7,7 @@ def happyface() :
   print("  \   '---'   /")
   print("   '. _____ .'")
 
-h = happyface()
-print(h)
+happyface()
 
 def sadface() : 
   print("      _____     ")
@@ -19,8 +18,7 @@ def sadface() :
   print("  \  /     \   /")
   print("   '. _____ .'")
 
-s = sadface()
-print(s)
+sadface()
 
 def surprisedface() : 
   print("      _____     ")
@@ -31,6 +29,5 @@ def surprisedface() :
   print("  \           /")
   print("   '. _____ .'")
 
-sr = surprisedface()
-print(sr)
+surprisedface()
 
