@@ -1,0 +1,8 @@
+def LinearSearch(array, searchitem) :
+  for i in range (len(array)) :
+    if array[i] == searchitem :
+      return i
+
+array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+searchitem = 'f'
+print("element found at index", str(LinearSearch(array,searchitem)))
