@@ -1,0 +1,67 @@
+#linear graph 
+
+from matplotlib.pyplot import ylabel, plot, show, xlabel, title, 
+x = [2, 4, 6, 8, 10, 12]
+y = [2, 4, 6, 8, 10, 12]
+# y = [2, 4, 6, 8, 10, 12] # Try this for Linear complexity
+plot(x, y, 'b')
+xlabel('Inputs')
+ylabel('Steps')
+title('Constant Complexity')
+show()
+
+#quadratic graph 
+
+import matplotlib.pyplot as plt
+
+a=[]
+b=[]
+# y=0
+# x=-50
+
+for x in range(-50,50,1):
+    y=x**2+2*x+2
+    a.append(x)
+    b.append(y)
+    #x= x+1
+
+fig= plt.figure()
+axes=fig.add_subplot(111)
+axes.plot(a,b)
+plt.show()
+
+#log graph 
+
+from matplotlib.pyplot import ylabel, plot, show, xlabel, title
+x = [0.01, 0.1, 1, 10, 100]
+y = [-2, -1, 0, 1, 2]
+
+plot(x, y, 'b')
+xlabel('Inputs')
+ylabel('Steps')
+title('Constant Complexity')
+show()
+
+#exponential graph
+
+from matplotlib.pyplot import ylabel, plot, show, xlabel, title
+x = [-3, -2, -1, 0, 1, 2, 3]
+y = [0.125, 0.25, 0.5, 1, 2, 4, 8]
+
+plot(x, y, 'b')
+xlabel('Inputs')
+ylabel('Steps')
+title('Constant Complexity')
+show()
+
+#factorial graph
+
+from matplotlib.pyplot import ylabel, plot, show, xlabel, title
+x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+y = [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.13, 0.63, 3.63]
+
+plot(x, y, 'b')
+xlabel('Inputs')
+ylabel('Steps')
+title('Constant Complexity')
+show()
