@@ -1,0 +1,84 @@
+import random
+
+class Character:
+    def __init__(self):
+        self.name = ""
+        self.experience = 0
+        self.patronus_strength = 0
+        self.wand_strength = 0
+        self.familiar_strength = 0 
+        
+
+    def print_basics(self):
+        print("\nName:       ",self.name)
+        print("experience:     ",self.experience)
+        print("patronus_strength:     ",self.patronus_strength)
+        print("wand_strength:     ",self.wand_strength)
+        print("familiar_strength: ",self.familiar_strength)
+
+    def setter(self,name):
+        self.name = name
+        self.experience = random.randint(0,50)
+        self.patronus_strength = random.randint(0,50)
+        self.wand_strength = random.randint(0,50)
+        self.familiar_strength = random.randint(0,50)
+    
+    def print_me(self):
+        self.print_basics()
+
+class muggle(Character):
+    def __init__(self):
+        Character.__init__(self)
+        self.quidditch_skills = random.randint(0,50)
+        self.magic_level = random.randint(1,10)
+
+    def print_me(self):
+        self.print_basics()
+        print("quidditch_skills:     ",self.quidditch_skills)
+        print("magic_level:      ",self.magic_level)
+
+class half_blood(Character):
+    def __init__(self):
+        Character.__init__(self)
+        self.quidditch_skills = random.randint(0,50)
+        self.magic_level = random.randint(1,10)
+
+    def print_me(self):
+        self.print_basics()
+        print("quidditch_skills:     ",self.quidditch_skills)
+        print("magic_level:      ",self.magic_level)
+
+class pure_blood(Character):
+    def __init__(self):
+        Character.__init__(self)
+        self.quidditch_skills = random.randint(0,50)
+        self.magic_level = random.randint(1,10)
+
+    def print_me(self):
+        self.print_basics()
+        print("quidditch_skills:     ",self.quidditch_skills)
+        print("magic_level:      ",self.magic_level)
+
+
+caste = input("Would you like to be a muggle, half-blood or pure-blood? M or H or P?")
+char_name = input("And what is your name?")
+
+if caste.upper() == "M":
+    print("How lucky! Congratulations on being the first generation wizard in your family. Welcome to the wizarding world!")
+    you = muggle()
+    you.setter(char_name)
+    you.print_me()
+elif caste.upper() == "H":
+    print("Thank you for bringing the two worlds together! It's thanks to people like you that the wizard population has not died out yet")
+    you = half_blood()
+    you.setter(char_name)
+    you.print_me()
+elif caste.upper() == "P":
+    print("A pure one I see. You definitely do have some advantage but don't be too confident.")
+    you = pure_blood()
+    you.setter(char_name)
+    you.print_me()
+else:
+    print("too lazy to type M, H or P? Well then you can be a squib")
+    you = Character()
+    you.print_me()
